@@ -1,5 +1,5 @@
 import Template from "./templates/Template.js";
-import db from "./db.json";
+import db from "../public/db.json";
 
 console.log("hola", db);
 

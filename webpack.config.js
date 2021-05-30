@@ -1,3 +1,4 @@
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -9,4 +10,9 @@ module.exports = {
   resolve: {
     extensions: [".js", ".ts"],
   },
+  //   plugins: [
+  //     new CopyWebpackPlugin({
+  //       patterns: [{ from: "src/db.json", to: "db.json" }],
+  //     }),
+  //   ],
 };

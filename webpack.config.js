@@ -10,6 +10,15 @@ module.exports = {
   resolve: {
     extensions: [".js", ".ts"],
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: { loader: "babel-loader" },
+      },
+    ],
+  },
   //   plugins: [
   //     new CopyWebpackPlugin({
   //       patterns: [{ from: "src/db.json", to: "db.json" }],

@@ -1,4 +1,5 @@
 import Template from "./templates/Template.js";
+import "../src/styles/main.css";
 // import db from "../public/db.json";
 
 console.log("hola level 1");

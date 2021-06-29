@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CSSMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin"); // not required install into package.json
+const DotEnv = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.js",
@@ -58,5 +59,6 @@ module.exports = {
       patterns: [{ from: "src/db.json", to: "db.json" }],
     }),
     new MiniCssExtractPlugin(),
+    new DotEnv(),
   ],
 };

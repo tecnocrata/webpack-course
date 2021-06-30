@@ -9,6 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main-[name]-[contenthash].js", // with main.js is enough
+    clean: true,
   },
   mode: "development",
   resolve: {
@@ -34,7 +35,6 @@ module.exports = {
       },
     ],
   },
-
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,

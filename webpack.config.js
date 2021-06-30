@@ -11,6 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main-[name]-[contenthash].js", // with main.js is enough
+    clean: true,
   },
   resolve: {
     extensions: [".js", ".ts"],

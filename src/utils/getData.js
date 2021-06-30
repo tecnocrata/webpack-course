@@ -1,5 +1,5 @@
 // const API = 'https://randomuser.me/api/';
-const API = process.env.API;
+const API = process.env.API; // now retrieving from environment variable
 
 const getData = async (id) => {
   const apiURl = id ? `${API}${id}` : API;

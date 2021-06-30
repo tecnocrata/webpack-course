@@ -12,6 +12,12 @@ module.exports = {
     clean: true,
   },
   mode: "development",
+  watch: true,
+  // the following is just for webpack-dev-server
+  // devServer: {
+  //   hot: true,
+  //   port: 8080,
+  // },
   resolve: {
     extensions: [".js", ".ts"],
     alias: {

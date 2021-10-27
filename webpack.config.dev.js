@@ -10,9 +10,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "main-[name]-[contenthash].js", // with main.js is enough
     clean: true,
+    publicPath: "/",
   },
   mode: "development",
-  watch: true,
+  // watch: true,
   // the following is just for webpack-dev-server
   // devServer: {
   //   hot: true,
@@ -39,6 +40,10 @@ module.exports = {
         // exclude: /node_modules/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
+      // {
+      //   test: /\.html$/i,
+      //   loader: "html-loader",
+      // },
     ],
   },
   plugins: [
@@ -53,4 +58,23 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new DotEnv(),
   ],
+  devServer: {
+    // static: "dist", //path.join(__dirname, "dist"),
+    static: [
+      {
+        directory: path.join(__dirname, "dist"),
+      },
+      {
+        directory: path.join(__dirname, "src/assets"),
+        publicPath: "/src/assets",
+      },
+      {
+        directory: path.join(__dirname, "styles"),
+        publicPath: "/src/styles",
+      },
+    ],
+    compress: true,
+    historyApiFallback: true,
+    port: 3006,
+  },
 };

@@ -57,7 +57,13 @@ module.exports = {
       filename: "./index.html",
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: "src/db.json", to: "db.json" }],
+      patterns: [
+        { from: "src/db.json", to: "db.json" },
+      //   {
+      //     from: path.resolve(__dirname, "src", "assets/images"),
+      //     to: "assets/images",
+      //   },
+      // ],
     }),
     new MiniCssExtractPlugin(),
     new DotEnv(),

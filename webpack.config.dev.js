@@ -15,6 +15,7 @@ module.exports = {
     publicPath: "/",
   },
   mode: "development",
+  devtool: "source-map",
   // watch: true,
   // the following is just for webpack-dev-server
   // devServer: {
@@ -71,10 +72,10 @@ module.exports = {
         directory: path.join(__dirname, "src/assets"),
         publicPath: "/src/assets",
       },
-      {
-        directory: path.join(__dirname, "styles"),
-        publicPath: "/src/styles",
-      },
+      // {
+      //   directory: path.join(__dirname, "styles"),
+      //   publicPath: "/src/styles",
+      // },
     ],
     compress: true,
     historyApiFallback: true,
